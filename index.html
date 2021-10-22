@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Plugins</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $( function() {
+                $( "#tabs" ).tabs();       
+                } );
+                $( function() {
+                    $( "#accordion" ).accordion({
+                            collapsible: true
+                        });
+                } );
+                $( function() {
+                    var availableTags = [
+                            "ActionScript",
+                            "AppleScript",
+                            "Asp",
+                            "BASIC",
+                            "C",
+                            "C++",
+                            "Clojure",
+                            "COBOL",
+                            "ColdFusion",
+                            "Erlang",
+                            "Fortran",
+                            "Groovy",
+                            "Haskell",
+                            "Java",
+                            "JavaScript",
+                            "Lisp",
+                            "Perl",
+                            "PHP",
+                            "Python",
+                            "Ruby",
+                            "Scala",
+                            "Scheme"
+                        ];
+                    $( "#tags" ).autocomplete({
+                        ource: availableTags
+                    });
+                } );
+                $( function() {
+                    $( "#datepicker" ).datepicker();
+                } );
+                $( function() {
+                    $( document ).tooltip();
+                 } );
+                $( function() {
+                    $( ".widget input[type=submit], .widget a, .widget button" ).button();
+                        $( "button, input, a" ).click( function( event ) {
+                            event.preventDefault();
+                        } );
+                    } );
+                
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog Site Example</h1>
+            <div class="ui-widget">
+                <label for="tags">Search: </label>
+                <input id="tags">
+              </div>
+        </header>
+        <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Accordion</a></li>
+              <li><a href="#tabs-2">Tooltip</a></li>
+              <li><a href="#tabs-3">Date</a></li>
+            </ul>
+            <div id="tabs-1">
+                <div id="accordion">
+                    <h3>Section 1</h3>
+                    <div>
+                      <p>
+                      Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                      ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                      amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                      odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                      </p>
+                    </div>
+                    <h3>Section 2</h3>
+                    <div>
+                      <p>
+                      Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                      purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                      velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                      suscipit faucibus urna.
+                      </p>
+                    </div>
+                    <h3>Section 3</h3>
+                    <div>
+                      <p>
+                      Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                      Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                      ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                      lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                      </p>
+                      <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                      </ul>
+                    </div>
+                    <h3>Section 4</h3>
+                    <div>
+                      <p>
+                      Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                      et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                      faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                      mauris vel est.
+                      </p>
+                      <p>
+                      Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                      inceptos himenaeos.
+                      </p>
+                    </div>
+                  </div>
+            </div>
+            <div id="tabs-2">
+                <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+                    the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.</p>
+                    <p>But as it&apos;s not a native tooltip, it can be styled. Any themes built with
+                    <a href="http://jqueryui.com/themeroller/" title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+                    will also style tooltips accordingly.</p>
+                    <p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
+                    <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+                    <p>Hover the field to see the tooltip.</p>
+            </div>
+            <div id="tabs-3">
+                <p>Date: <input type="text" id="datepicker"></p>
+                <button class="ui-button ui-widget ui-corner-all">Submit</button>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
